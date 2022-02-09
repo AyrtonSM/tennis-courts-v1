@@ -1,3 +1,4 @@
+
 buildscript {
     ext {
         springBootVersion = '2.2.3.RELEASE'
@@ -8,6 +9,10 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
+}
+
+plugins {
+    id 'application'
 }
 
 apply plugin: 'java'
@@ -21,6 +26,10 @@ repositories {
     mavenCentral()
 }
 
+mainClassName = 'com.tenniscourts.TennisCourtApplication.java'
+//application {
+//    mainClass =
+//}
 configurations {
     providedRuntime
 }
